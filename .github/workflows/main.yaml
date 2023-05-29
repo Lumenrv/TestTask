@@ -9,7 +9,7 @@ jobs:
   cypress-e2e-chrome:
     name: Run on Chrome
     runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.0-chrome83-ff77
+    container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
       - uses: actions/checkout@v2
       
