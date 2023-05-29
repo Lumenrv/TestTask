@@ -3,13 +3,16 @@ on:
   push:
     branches:
       - 'main'
+  # Add this part if you want to schedule test rerun
+  # schedule:
+  #   - cron: '0 8 1-31 * *'
 
 jobs:
   
-  cypress-e2e-chrome:
-    name: Run on Chrome
-    runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.3-chrome87-ff82
+  cypress-e2e-chrome81:
+    name: Run on Chrome 81
+    runs-on: ubuntu-18.04
+    container: cypress/browsers:node12.16.2-chrome81-ff75
     steps:
       - uses: actions/checkout@v2
       
