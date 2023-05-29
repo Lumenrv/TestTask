@@ -6,10 +6,10 @@ on:
 
 jobs:
   
-  cypress-e2e-chrome81:
-    name: Run on Chrome 81
+  cypress-e2e-chrome:
+    name: Run on Chrome
     runs-on: ubuntu-18.04
-    container: cypress/browsers:node12.16.2-chrome81-ff75
+    container: cypress/browsers:node18.6.0-chrome105-ff104
     steps:
       - uses: actions/checkout@v2
       
