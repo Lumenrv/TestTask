@@ -8,7 +8,7 @@
     "mochawesome-report-generator": "^6.2.0"
   },
   "scripts": {
-    "test:chrome": "cypress run --browser chrome",
+    "test:chrome": "cypress run -b chrome",
     "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
     "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   }
