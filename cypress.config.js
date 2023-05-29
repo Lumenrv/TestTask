@@ -6,4 +6,9 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+  reporter: "cypress-multi-reporters",
+  reporterOptions: {
+        configFile: "reporter-config.json"
+    },
+    videoCompression: 15
 });
