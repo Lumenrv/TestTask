@@ -3,14 +3,10 @@ on:
   push:
     branches:
       - 'main'
-  # Add this part if you want to schedule test rerun
-  # schedule:
-  #   - cron: '0 8 1-31 * *'
-
 jobs:
   
-  cypress-e2e-chrome81:
-    name: Run on Chrome 81
+  cypress-e2e:
+    name: Cypress test run
     runs-on: ubuntu-latest
     container: cypress/browsers:node-18.14.1-chrome-111.0.5563.110-1-ff-111.0-edge-111.0.1661.51-1
     steps:
@@ -28,6 +24,7 @@ jobs:
         run: |
           mkdir public
           cp -r cypress/videos public/videos
+          cp -r cypress/screenshots public/screenshots
       
       - name: Merge test results into one
         run: npm run report:merge
