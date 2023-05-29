@@ -1,3 +1,6 @@
 node_modules
-logs
-*.log
+/public
+*.mp4
+*.png
+index.json
+/cypress/results
